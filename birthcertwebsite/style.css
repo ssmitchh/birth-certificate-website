@@ -1,0 +1,466 @@
+html{
+    height: 100%;
+}
+
+body{
+    height: 100%;
+    margin: 0px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(206, 206, 197, 0.5)),
+                  url(flag.gif);
+   
+    /* background-image: url(flag.gif) rgba(255, 255, 255, 0.466); */
+    /* background-size: 35cm; */
+    /* opacity: 0.3; */
+}
+
+.best{
+    font-size: large;
+    background-color: white;
+	text-align: center;
+
+}
+
+.mainDiv{
+    
+    display: grid;
+    grid-template-columns: 2;
+    gap: 10px;
+  
+    font-size: 20px;
+	color:black;
+	
+
+	position: fixed;
+	top: 10%;
+	left: 5%;
+    right: 5%;
+    bottom: 40px;
+    border-radius: 6p;
+
+ 
+	/* padding: 30px; */
+	/* border: 5px solid black;
+	border-radius: 3px; */
+	/* border-color: black; */
+	/* box-shadow: black 10px 10px; */
+
+}
+
+.one{
+   width: 380px;
+    
+    background-color: white;
+    grid-column: 1;
+    padding: 30px; 
+	/* border: 5px solid black;
+	border-radius: 3px; 
+	border-color: black;  */
+    border-radius: 6px;
+    
+	
+
+}
+.two{
+    width: 800px;
+    background-color: white;
+    grid-column: 2;
+    padding: 30px; 
+    border-radius: 6px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11pt;
+    font-weight: bold;
+	
+
+  
+    /* border: 5px solid black;
+	border-radius: 3px; 
+	border-color: black; */
+    
+}
+
+.footer{
+    background-color: white;
+    font-size: 6pt;
+    bottom: 1px;
+    position:fixed;
+    text-align: center;
+    left:0px;
+    right: 0px;
+}
+
+.options{
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-rows: 2;
+    gap: 25px;
+    
+
+}
+
+.topleft{
+    position: relative;
+    grid-column: 1;
+    grid-row: 1;
+    border-radius: 5px;
+}
+
+.bottomleft{
+    position: relative;
+    grid-column: 1;
+    grid-row:2;
+    border-radius: 5px;
+}
+.topright{
+    position: relative;
+    grid-column: 2;
+    grid-row:1;
+    border-radius: 5px;
+   
+}
+.bottomright{
+    position:relative;
+    grid-column: 2;
+    grid-row:2;
+    border-radius: 5px;
+   
+}
+.option:hover{
+    border: 0.05px solid #888888;
+    border-radius: 5px;
+    margin: -1px;
+    box-shadow: 0px 2px 5px #888888;
+    cursor: pointer;
+}
+
+.option:hover .expand-button{
+    display: block;
+    transition: .3s ease;
+   
+}
+.option:hover .upload-button{
+    display: block;
+    transition: .3s ease;
+   
+}
+
+ .selected{
+    border: 0.05px solid #888888;
+    margin: -1px;
+    border-radius: 5px;
+ }
+ input{
+     width: 48%;
+    border: 0.05px solid #888888;
+    border-radius: 5px;
+    border-radius: 5px;
+    font-size: 9pt;
+    
+
+ }
+ 
+
+ .expand-button {
+     width: 30px;
+     height: 30px;
+     /* background-color: white; */
+     left:0;
+     top: 0;
+    position: absolute;
+    margin:5px;
+    
+    display: none;
+   
+ }
+
+ .hidden{
+     display:none;
+ }
+ 
+ .big{
+    float:left;
+    position: relative;
+     top: 10px;
+     left:35%;
+     border:transparent;
+     border-radius: 10px;
+ }
+
+ .popup{
+     
+     position: fixed;
+     top:0;
+     left:0;
+     right:0;
+     bottom:0;
+     background-color: rgba(0, 0, 0, 0.5);
+     z-index: 3;
+     
+ }
+
+ /* .popup:hover{
+     scale: 150%;
+
+ } */
+ .close-button{
+    
+     position:absolute;
+     width: 50px;
+     height: 50px;
+     /* background-color: white; */
+     left:0;
+     top: 0;
+   
+    
+
+ }
+
+ .upload-button{
+    position:absolute;
+    width: 50px;
+    height: 50px;
+    /* background-color: white; */
+    left: 37%;
+    top: 37%;
+    display: none;
+ }
+ #display_image{
+    display: inline-block;
+   
+    
+    background-position: center;
+    background-size: cover;
+    /* position: absolute; */
+  }
+
+  .upload{
+      text-align: center;
+      position: absolute;
+    
+    height:fit-content;
+    /* display: inline-block; */
+    float:left;
+    position: absolute;
+    background-color: white;
+    border-radius: 6px;
+    padding: 100px; 
+    top:15%;
+    left:25%;
+    right: 25%;
+    bottom: 25%;
+    /* width: 500px; */
+    /* justify-content: center; */
+
+
+
+
+  }
+
+
+  .sticker{
+   
+    top: -20px;
+    /* right:10px; */
+    left:80%;
+    /* right: 70px; */
+    right:0;
+    z-index: 1;
+  }
+
+  .flag{
+    position: fixed;
+  }
+  .red-sticker{
+      /* float:left; */
+    /* position:absolute; */
+    position:fixed;
+      animation-name: spin;
+  animation-duration: 50000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
+  }
+
+  @keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+.sticker:hover{
+    color: white;
+    cursor: pointer;
+    /* animation-name: spin;
+    animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;  */
+}
+
+.final-cert{
+    position: relative;
+	top: 2%;
+    width: 620px;
+    height: 877px;
+    
+    left: 30%;
+	/* left: 40%; */
+    /* right: 50px; */
+    /* bottom: 40px; */
+   
+
+    
+}
+.final-cert2{
+   
+    position: absolute;
+	top: 2%;
+    width: 620px;
+    height: 877px;
+    
+    left: 30%;
+	/* left: 40%; */
+    /* right: 50px; */
+    /* bottom: 40px; */
+   
+
+    
+}
+.final-text{
+    font-size: 11pt;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+
+.regNum{
+    left:495px;
+    position:absolute;
+    top:710px;
+  
+    z-index: 5;
+    line-height: 7px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11pt;
+    font-weight: bold;
+
+    
+}
+.firstName{
+    position:absolute;
+    top:130px;
+    left: 250px;
+}
+.surname{
+    position:absolute;
+    top: 152px;
+    left: 250px;
+}
+.firstNameAtBirth{
+    position:absolute;
+    top: 174px;
+    left: 250px;
+}
+.surnameAtBirth{
+    position:absolute;
+    top: 196px;
+    left: 250px;
+}
+.sex{
+    position:absolute;
+    top: 218px;
+    left: 250px;
+}
+.stillBirth{
+    position:absolute;
+    top: 240px;
+    left: 250px;
+}
+
+.dob{
+    position:absolute;
+    top: 262px;
+    left: 250px;
+}
+.pob{
+    position:absolute;
+    top: 281px;
+    left: 250px;
+} 
+.nzcitizen{
+    position:absolute;
+    top: 302px;
+    left: 250px;
+
+}
+.namechange{
+    position:absolute;
+    top: 320px;
+    left: 250px;
+}
+.mfirstName{
+    position:absolute;
+    top: 382px;
+    left: 250px;
+}
+.msurname{
+    position:absolute;
+    top: 406px;
+    left: 250px;
+}
+.mfirstNameAtBirth{
+    position:absolute;
+    top: 426px;
+    left: 250px;
+}
+.msurnameAtBirth{
+    position:absolute;
+    top: 448px;
+    left: 250px;
+}
+.mdob{
+    position:absolute;
+    top: 470px;
+    left: 250px;
+}
+.mpob{
+    position:absolute;
+    top: 489px;
+    left: 250px;
+}
+.dfirstName{
+    position:absolute;
+    top: 542px;
+    left: 250px;
+}
+.dsurname{
+    position:absolute;
+    top: 562px;
+    left: 250px;
+}
+.dfirstNameAtBirth{
+    position:absolute;
+    top: 584px;
+    left: 250px;
+}
+.dsurnameAtBirth{
+    position:absolute;
+    top: 606px;
+    left: 250px;
+}
+.ddob{
+    position:absolute;
+    top: 628px;
+    left: 250px;
+}
+.dpob{
+    position:absolute;
+    top: 647px;
+    left: 250px;
+}
+
+
